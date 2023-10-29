@@ -1,0 +1,454 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: nimbus-sans, sans-serif;
+    /* background-color: beige; */
+    /* font-style: normal; */
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+}
+
+#nav{
+    /* background-color: red; */
+    position: relative;
+    /* "RELATIVE" ----> relative to its Normal Postion mtlb vo top pe firse chala jaega */
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 10vw;
+    
+}
+
+#navleft{
+    display: flex;
+    /* 'flex'---->As you lay out your items you want to control the dimensions 
+    of the items in that one dimension, or control the spacing between items.*/
+    gap: 30px;
+}
+
+#nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block; /* as "a-tag " doesnt allow animation so ta apply javascript animations we set it INLINE-BLOCK*/
+}
+
+
+#nav #centeratag{
+    font-size: 14px;
+    position: absolute;
+    /* 'Absolute' means "relative to the parent" mtlb parent ke position ke respective Sheriyans Move karega */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* now if u write the above line the text will come at the center of the screen so we will make nav position RELATIVE */
+}
+
+
+
+/*-------------------------------------- Section 1 --------------------------------------*/
+
+#hero{
+    width: 100%;
+    /* height: 100px; */
+    margin-top: 15vw;
+    /* background-color: rgb(121, 145, 165); */
+    padding: 0vw 10vw;
+/*the above padding is same as NAV Padding as we need the text of the hero div to come
+exactly same as the nav div; just we have kept the top padding 0vw beacuse we dont need it */
+
+    display: flex; /* as we need SUSTAIN EPHEMERAL and Visit Our Gallery
+     page one beside other */
+    justify-content: space-between; 
+    /* So that there is space between these partitions */
+    align-items: center;
+}
+
+
+
+
+
+      /*-------------------------- Sustainability --------------------------*/
+
+#sustain{
+    width: 10vw;  
+    /* we will set the sustain div width so that the para-tag that we have used in the
+     div will be formated exactly in the frame */
+}
+
+#sustain #susimagewrapper{
+    position: relative;
+    overflow: hidden;/*so that the extra part of the image that overlaps the para tag will be hidden*/
+    width: 100%;
+    height: 15vw;
+    /* background-color: rgb(121, 145, 165); */
+}
+
+#sustain p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    margin: 10px 0;
+    font-weight: 700;
+    opacity: .5;
+    text-transform: capitalize;
+}
+
+#susimagewrapper img{
+    width:100%;
+    height: 100%;
+    object-fit: cover; /* so that it makes sure that the image is set properly inside the div */
+
+}
+
+
+      /*-------------------------- Ephemeral --------------------------*/
+
+#ephemeral{
+    position: relative;
+    width: 30vw;
+    min-height: 42vw; /* as we have to adjust whole imgntext in Ephmeral so that when we create "Our Motive" 
+    it is created below the text that we have enterd under the image */
+    /* To check the height of the hero div set hero div bg color line no-62*/
+    /* background-color: antiquewhite; */
+}
+
+#imgntext{
+    /* background-color: red; */
+    width: fit-content;
+    height: fit-content;
+}
+
+#ephemeral h1{
+    letter-spacing: -.4vw;
+    font-size: 6vw;
+    font-weight: 400;
+    
+}
+
+#ephemeral #headings{
+    top: -22%;
+    left: -20%;
+    position: absolute;
+}
+
+#ephemeral img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#ephemeral p{
+    font-size: 1.3vw;
+    width: 40%;
+    letter-spacing: -.08vw;
+    line-height: 1.3;
+}
+
+
+
+
+
+
+
+
+
+      /*-------------------------- Visit Our Gallery --------------------------*/
+
+#visit{
+    display: flex;/* so that the arrow and the text are aligned side-by-side to eachother */
+    gap: 20px;
+    align-items: center;
+}
+
+#visitscircle{
+    display: flex;
+    align-items: center;
+    justify-content: center;/* to make the arrow at the center of the div */
+    width: 3vw;
+    height: 3vw;
+    /* background-color: aqua; */
+    border-radius: 50%;
+    border: 1px solid #5e5e5e;
+}
+
+#visitscircle i{
+    color: #5e5e5e;
+}
+
+#visit h3{
+    font-weight: 400;
+    color: #5e5e5e;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------- Section2- Our Motive ---------------------------------*/
+
+#motive{
+    margin-top: 7vw;
+    padding: 3vw 10vw;
+    /* to mak ethe paragraph conetnts to the right we do the folloeimg:- */
+    display: flex;
+    justify-content: center;
+    
+}
+
+#motive h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #5e5e5e;
+}
+
+
+#motive span{
+    display: inline-block;
+    /* width: 80px;
+    height: 50px; */
+    /* background-color: red; */
+
+
+
+    /* You cant give width and height to span tag until and unless u set the "display to inline-block" */
+    margin: 0 10px;
+    border-radius: 100px;
+    margin: 0 13px;
+    margin-bottom: -12.5px; 
+    /* to align the images at center */
+}
+
+#motive p{
+    line-height: 1.7;
+    letter-spacing: -.12vw;
+    width: 85%;
+    text-align: right;
+    font-size: 2.1vw;
+    flex-wrap: wrap;
+    /* to specify whether flex items are forced into a single line or wrapped onto multiple lines. */
+}
+
+
+
+#onespan{
+    width: 80px;
+    height: 50px;
+    background-image: url(./Images/bluegirl.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#twospan{
+    width: 130px;
+    height: 60px;
+    background-image: url(./Images/shaljam.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#threespan{
+    width: 80px;
+    height: 50px;
+    background-image: url(./Images/grass.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+/*---------------------------------------- Section3- Pictures ----------------------------------------*/
+#pictures{
+    margin-top: 8vw;
+    padding: 3vw;
+    padding-left: 14vw;
+    padding-right: 12vw;
+    display: flex; 
+    /* so that pic one and pic 2 are side by side */
+    justify-content:space-between;
+
+}
+
+#firstpic{
+    width: 17vw;
+}
+
+#firstpic #picimg{
+    width: 100%;
+    height: 24vw;
+    margin-bottom: 1vw;
+    /* background-color: red; */
+}
+
+#firstpic p, #secpic p{
+    font-size: 1vw;
+    margin-top: 10px;
+    opacity: .8;
+    letter-spacing: -.07vw;
+}
+
+#firstpic h1{
+    letter-spacing: -.1vw;
+    font-weight: 100;
+    font-size: 2vw;
+
+}
+
+#picimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+#secpic #picimg{
+    width: 100%;
+    height: 37vw;
+    margin-bottom: 1vw;
+    /* background-color: red; */
+}
+
+#secpic{
+    width: 25vw;
+    /* display: flex;
+    flex-direction: column;
+    align-items: end; */
+
+    /* Another way:- */
+
+    text-align: right;
+}
+
+#secpic p{
+    text-align: right;
+}
+
+#secpic h1{
+    letter-spacing: -.1vw;
+    font-weight: 100;
+    font-size: 2vw;
+
+}
+
+
+
+
+
+
+
+
+/*---------------------------------------- Section4- Banner ----------------------------------------*/
+
+
+#banner{
+    width: 100%;
+    margin-top: 8vw;
+    display: flex;
+    align-items: center;
+}
+
+#bimg{
+    width: 65%;
+    height: 60vh;
+    /* background-color: aliceblue; */
+}
+
+#bimg img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover ;
+    object-position: 0% 70%;
+}
+
+#btxt{
+    width: 35%;
+    padding: 0px 3vw;
+}
+
+#btxt h1{
+    font-size: 2.8vw;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -.14vw;
+}
+
+#btxt p{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    width: 60%;
+    font-size: 1vw;
+    font-weight: 600;
+}
+
+
+#future{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    /* background-color: aliceblue; */
+}
+
+#future video{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+#ftext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+    background-color: #fff;
+    padding: 1vw 2vw;
+    border-radius: 10px;
+}
+
+#ftext button{
+    font-family: 'Roboto', sans-serif;
+    padding: .8vw 1.7vw;
+    font-size: .6vw;
+    text-transform: capitalize;
+    letter-spacing: -.05vw;
+    font-weight: 600;
+    border-radius: 100px;
+    background-color: #fff;
+    border: 1px solid #5e5e5e;
+    color: #5e5e5e;
+    margin-top: 10px;
+}
+
+#ftext button:hover{
+    background-color: rgb(57, 78, 97);
+    color: white;
+    transition: 1s;
+    box-shadow: 0 0 10px teal;
+}

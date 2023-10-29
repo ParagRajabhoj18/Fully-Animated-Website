@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Linking LOCOMOTIVE JS CDN -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+    <!-- hery js CDN CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+    </style>
+<!-- Remix Icon -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <div id="main">
+        <div id="home">
+            <div id="nav">
+
+                <div id="navleft">
+                    <!-- added class nlink for performing gsap operation in JS -->
+                    <a class="nlink" href="#">Home</a>
+                    <a class="nlink" href="#">Price</a>
+                    <a class="nlink" href="#">Products</a>
+                    <!-- '#' so that the links are associated to the same chrome page -->
+                </div>
+    
+                <a id="centeratag" href="#">Sheriyans</a>
+    
+                <div id="navright">
+                    <a class="nlink" href="#">Our Journey</a>
+                </div>
+    
+    
+            </div>
+
+            <div id="hero">
+                <!-- adding classes to sustain ephemeral and visit to apply js -->
+                <div class ="anim2" id="sustain">
+                    <h5>01.</h5>
+                    <h2>Sustainability.</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum.</p>
+                    <div id="susimagewrapper">
+                        <img src="Images/pinkgreenplant.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class ="anim2" id="ephemeral">
+                    <div id="headings">
+                        <h1>Ephemeral</h1>
+                        <h1>Equlibrium.</h1>
+                    </div>
+                    <div id="imgntext">
+                        <img src="Images/pinkplant.jpg" alt="">
+                        <p>Commited to Sustainability and Eco-friendly choices for better tomorrow</p>
+                    </div>
+                          
+                </div>
+
+                <div class ="anim2" id="visit">
+                    <div id="visitscircle">
+                        <i class="ri-arrow-down-line"></i>
+                    </div>
+                    <h3>Visit Our Gallery.</h3>
+                </div>
+
+
+
+            </div>
+
+            
+
+
+        </div>
+
+        <div id="motive">
+            <h3>OUR MOTIVE</h3>
+            <p>Lorem ipsum dolor sit amet dfdfew elit. Exercitationem sint enim 
+                voluptatibus necessitatibus qui accusantium <span id="onespan"></span> quisquam soluta et eveniet modi 
+                labore itaque, dolorem recusandae, officiis, alias fuga aliquam <span id="twospan"></span> ratione. 
+                Necessitatibus cumque atque ut assumenda porro eveniet obcaecati <span id="threespan"></span> saepe delectus 
+                dolorem?</p>
+            <!-- Used span tag so that it doesnt breaks the line and continues -->
+        </div>
+
+        <div id="pictures">
+            <div id="firstpic">
+                <div class="imgeffect" id="picimg">  
+                    <!-- Adding classes to apply JS animations to both using same class -->
+                    <img src="./Images/sea.jpg" alt="">
+                </div>
+                    <h1>Synergy.</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+
+
+            <div id="secpic">
+                <div class="imgeffect"  id="picimg">
+                    <img src="./Images/cloud.jpg" alt="">
+                </div>
+                    <h1>Harmony.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laboriosam repellat voluptas sunt recusandae quisquam.</p>
+            </div>
+        </div>
+
+        <div id="banner">
+            <div id="bimg">
+                <img src="Images/bottle.jpg" alt="">
+                <!-- the below image is used to give it a Effect using JS -->
+                <img src="Images/bottle2.jpg" alt=""> 
+
+            </div>
+            <div id="btxt">
+                <h1>Biodegradable</h1>
+                <h1>Packaging</h1>
+                <p>Commited to Sustainability and Eco-friendly choices for better tomorrow</p>
+            </div>
+        </div>
+
+        <div id="future">
+            <video src="Images/back.mp4" autoplay muted loop></video>
+            <div id="ftext">
+                <h1>Think Of Future</h1>
+                <button>Join the Movement</button>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+    <!-- Gsap CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+    <!-- shery js to animate images accordingly copied from  (Shery js is the js on github of Sheriyans "https://github.com/asynchronousJavascriptor/sheryjs" Required Libraries) -->
+        <!-- Scroll Trigger is needed for Scroll Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+        <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+        <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+
+    <!-- Shery JS CDN (JavaScript)  from "https://github.com/asynchronousJavascriptor/sheryjs" -->
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+
+
+
+    <!--Locomotive Smooth Scroll JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+    <!-- Our JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
